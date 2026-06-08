@@ -1,10 +1,11 @@
 // import React from 'react';
+import '../../App.css';
 
 const Countries = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <h1 className="countries-title">Countries</h1>
+        </>
     );
 };
 
