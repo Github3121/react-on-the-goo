@@ -8,3 +8,33 @@
     text-align: center;
     font-size: 1.5rem;
 }
+.countries-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin: 20px;
+}
+.child-container {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.child-container:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* .country-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+} */
+
+.bold {
+    /* font-weight: bold; */
+    color: black;
+}
