@@ -1,19 +1,27 @@
 // import React from 'react';
-import { use } from 'react';
+import { use, useState } from 'react';
 import '../../App.css';
 import Country from '../country/Country';
 
 
-const Countries = ({fetchData}) => {
+const Countries = ({ fetchData }) => {
     const useData = use(fetchData);
     const countries = useData.countries;
-    console.log(countries);
+    const [visitedCountries, setVisitedCountries] = useState([]);
+    const handleVisitedCountries = (country) => {
+        setVisitedCountries([...visitedCountries, country]);
+    };
+    console.log(visitedCountries);
+    const removeVisitedCountry = (country) => {
+        setVisitedCountries(visitedCountries.filter((c) => c !== country));
+    }
     return (
-        <>
+        <div className="fractal-background">
             <h1 className="countries-title">Countries</h1>
             <p className='lengthShow'>{countries.length} countries found.</p>
-            <Country countries={countries}></Country>
-        </>
+            <p className='lengthShow'>{visitedCountries.length} visited countries.</p>
+            <Country key={countries.ccn3} countries={countries} handleVisitedCountries={handleVisitedCountries} removeVisitedCountry={removeVisitedCountry}/>
+        </div>
     );
 };
 
