@@ -24,6 +24,7 @@
     border: 2px solid rgb(34, 155, 220);
     padding: 10px;
     border-radius: 10px;
+    color: white;
 }
 
 .child-container:hover {
@@ -34,11 +35,11 @@
 }
 
 .bold {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .visited {
-    background-color: rgb(180, 255, 180);
-    border: 1px solid green;
+    background-color: rgba(0, 255, 179, 0.493);
+    border: 1px solid rgb(255, 255, 255);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -55,8 +56,8 @@
     background-color: transparent;
 }
 .visited-button {
-    background-color: green;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
     color: white;
     padding: 10px 20px;
-    border: none;
 }

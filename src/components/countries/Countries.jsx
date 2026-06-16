@@ -11,15 +11,16 @@ const Countries = ({ fetchData }) => {
     const handleVisitedCountries = (country) => {
         setVisitedCountries([...visitedCountries, country]);
     };
-    console.log(visitedCountries);
     const removeVisitedCountry = (country) => {
         setVisitedCountries(visitedCountries.filter((c) => c !== country));
     }
     return (
         <div className="fractal-background">
             <h1 className="countries-title">Countries</h1>
-            <p className='lengthShow'>{countries.length} countries found.</p>
-            <p className='lengthShow'>{visitedCountries.length} visited countries.</p>
+            <p className='lengthShow'>{countries.length} found | {visitedCountries.length} visited</p>
+            <p style={{textAlign: 'center'}}>
+                {visitedCountries.join(' | ')}
+            </p>
             <Country key={countries.ccn3} countries={countries} handleVisitedCountries={handleVisitedCountries} removeVisitedCountry={removeVisitedCountry}/>
         </div>
     );

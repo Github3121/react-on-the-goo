@@ -19,6 +19,7 @@
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
+  background-color: black;
   background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -7,7 +7,7 @@ const Country = ({ countries, handleVisitedCountries, removeVisitedCountry }) =>
         <>
             <div className="countries-Container">
                 {countries.map((country) => (
-                    <CountryCard country={country} handleVisitedCountries={handleVisitedCountries} removeVisitedCountry={removeVisitedCountry}></CountryCard>
+                    <CountryCard key={country.ccn3.ccn3} country={country} handleVisitedCountries={handleVisitedCountries} removeVisitedCountry={removeVisitedCountry}></CountryCard>
                 ))}
             </div>
         </>

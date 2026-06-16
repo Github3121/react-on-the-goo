@@ -9,7 +9,7 @@ const CountryCard = ({ country, handleVisitedCountries, removeVisitedCountry }) 
                 setVisited(!visited);
                 `${!visited ? handleVisitedCountries(country.name.common) : removeVisitedCountry(country.name.common)}`;
             }} key={country.area.area}>
-                <img style={{ border: '1px solid gray', borderRadius: '5px' }} src={country.flags.flags.png} alt={country.flags.flags.alt} width="100%" />
+                <img style={{ borderRadius: '5px' }} src={country.flags.flags.png} alt={country.flags.flags.alt} width="100%" />
                 <h2>{country.name.common}</h2>
                 <p className="country-info">
                     <span>CCN Code: {country.ccn3.ccn3}</span>
